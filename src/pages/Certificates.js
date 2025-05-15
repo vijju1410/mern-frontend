@@ -11,6 +11,14 @@ const certificates = [
     link: 'https://github.com/vijju1410/degree/blob/main/degree.pdf'
   },
     {
+    title: 'Introduction to cloud computing',
+    institution: 'AWS academy',
+    year: '2024',
+    type: 'Certificaion',
+    image: '/certificates/aws.jpeg',
+    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7171962920073871360/'
+  },
+    {
     title: 'Programming with Python',
     institution: 'Coursera',
     year: '2023',

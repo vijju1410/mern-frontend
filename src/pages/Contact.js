@@ -10,17 +10,16 @@ function Contact() {
     const handleChange = e => {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-        // Change URL to the live backend on Render
-        const res = await axios.post('https://mern-backend-acwg.onrender.com/api/contact', formData);
-        alert(res.data.message);  // Or use toast
-        setFormData({ name: '', email: '', message: '' });
-    } catch (err) {
-        alert('Error sending message');
-    }
-};
+    const handleSubmit = async e => {
+        e.preventDefault();
+        try {
+          const res = await axios.post('https://mern-backend1-f9rt.onrender.com/api/contact', formData);
+          alert(res.data.message); // Or use toast
+          setFormData({ name: '', email: '', message: '' });
+        } catch (err) {
+          alert('Error sending message');
+        }
+      };
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-white to-blue-50" id="contact">
       <div className="max-w-4xl mx-auto text-center">
@@ -92,7 +91,7 @@ function Contact() {
             href="https://www.linkedin.com/in/vijay-prajapati-ab3814234/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-400"
+            className="hover:text-blue-400"
           >
             <i className="fab fa-linkedin"></i>
           </a>
@@ -100,7 +99,7 @@ function Contact() {
             href="https://www.instagram.com/vijju_1410/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-400"
+            className="hover:text-red-400"
           >
             <i className="fab fa-instagram"></i>
           </a>
@@ -112,6 +111,22 @@ function Contact() {
   >
     <i className="fab fa-whatsapp"></i>
   </a>
+   <a
+              href="https://www.facebook.com/vijju.prajapati.90"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500"
+            >
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@vijayprajapati014"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-red-500"
+            >
+              <i className="fab fa-youtube"></i>
+            </a>
         </div>
           </div>
         </div>
